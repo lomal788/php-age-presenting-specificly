@@ -1,0 +1,30 @@
+<!-- By.Lomal lomal.tistory.com -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<?
+$m = microtime(true);
+$myvar = @strtotime("1997-12-23 05:30:0");
+?>
+<div id="content">
+<p>I am currently <span id="years"><b></b></span> years old. By.Lomal</p>
+</div>
+<script type="text/javascript">
+var sec_in_year = 365.2425 * 24 * 60 * 60;
+var offset = <?=$m?> - .001 * (new Date()).getTime();
+var years_node = document.getElementById("years");
+
+function update_years() {
+var t = .001 * (new Date()).getTime() + offset;
+var dt = t - <? echo $myvar ?>;
+var y = dt / sec_in_year;
+years_node.replaceChild(document.createTextNode(y.toFixed(8)), years_node.childNodes[0]);
+}
+setInterval(update_years, sec_in_year * 1e-8 * 1000);
+</script>
+</body>
+</html>
