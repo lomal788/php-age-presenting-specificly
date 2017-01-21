@@ -1,7 +1,7 @@
 # php-age-presenting-specificly
 ##### you can print your age specificly
 
-![age](/age.png)
+![age](/age.PNG)
 
 
 
