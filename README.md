@@ -1,7 +1,8 @@
 # php-age-presenting-specificly
 ##### you can print your age specificly
 
-![Alt text](/age.jpg)
+![Alt text](/path/to/age.jpg)
+
 
 
 <pre>
